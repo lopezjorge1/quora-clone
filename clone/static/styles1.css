@@ -1,0 +1,124 @@
+html,body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    background-color: #fafafa;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 450;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 21%;
+}
+
+header {
+    background-color: #ffffff;
+    height: 3.25em;
+    border-bottom: .0625em solid #dddddd;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    min-width: 100%;
+    float: left;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 0.015625em;
+    padding-top: 0.9375em;
+    width: 6.25em;
+    vertical-align: top;
+}
+
+nav li a {
+    display: block;
+    font-size: .875em;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    transform: translateY(-30%);
+    color: #555555;
+    border-bottom: 0.09375em solid transparent;
+}
+
+ li:nth-child(1) a:hover, li:nth-child(2) a:hover, li:nth-child(3) a:hover, .btn:hover {
+    background-color: #f6f6f6;
+}
+
+ li:nth-child(1) a:focus, li:nth-child(2) a:focus {
+    background-color: #ffffff;
+    border-bottom-color: #a8282f;
+    color: #a8282f;
+}
+
+li input {
+    background-image: url('search.png');
+    background-position: 0.3125em center;
+    background-repeat: no-repeat;
+    background-size: 1.25em;
+    width: 21.875em;
+    height: 0.125em;
+    font-size: 0.93em;
+    font-weight: 250;
+    padding: .75em 1.25em .75em 1.875em;
+    border: 0.0625em solid #dddddd;
+    border-radius: 0.3125em;
+    margin-bottom: .75em;
+    margin-left: 0.4375em;
+    outline: none;
+}
+
+li:nth-child(4) {
+    transform: translate(-1.5%,-2%);
+}
+
+li:nth-child(5) {
+    margin-left: 17.75em;
+}
+
+li:nth-child(6) {
+    transform: translate(-50%);
+}
+
+.btn {
+    background-image: url('quora.png');
+    background-repeat: no-repeat;
+    background-size: 1.9em;
+    background-position: center;
+    color: #555555;
+    padding-top: 2.6875em;
+    padding-bottom: 1em;
+    width: 3em;
+
+}
+
+#question {
+    background-color: #a8382f;
+    text-align: center;
+    color: #ffffff;
+    height: .35em;
+    width: 7.5em;
+    border-radius: .25em;
+    padding-top: 0.3125em;
+    transform: translate(-4%,-10%);
+}
+
+#options {
+     display: none;
+}
+
