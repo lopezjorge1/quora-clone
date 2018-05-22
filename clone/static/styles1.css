@@ -34,6 +34,7 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    white-space: nowrap; /*elements were wrapping when the page resized*/
 }
 
 nav ul li {
@@ -151,13 +152,14 @@ li:nth-child(6) {
 }
 
 #options::after {
-    border-color: rgba(214, 214, 214, 0);
+    border-color: rgba(214, 214, 214, 0); /*rgba is used so that the opacity is 0*/
     border-bottom-color: whitesmoke;
 	border-width: 1.875em;
 	margin-left: -1.875em;
 	transform: translateY(17%);
 }
 
+/*two triangles used to create the pointer with a border*/
 #options::before {
     border-color: rgba(245, 245, 245, 0);
 	border-bottom-color: #d6d6d6;
@@ -176,7 +178,7 @@ li:nth-child(6) {
     padding-left: 1.1em;
     text-decoration: none;
     text-align: left;
-    line-height: 50%;
+    line-height: 50%; /*so that the elements were in the middle of the div*/
     border: .1em solid #d6d6d6;
 }
 
