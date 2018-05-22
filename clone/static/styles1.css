@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100%;
@@ -45,7 +46,7 @@ nav ul li {
     vertical-align: top;
 }
 
-nav li a {
+nav li a, li:nth-child(3) a {
     display: block;
     font-size: .875em;
     text-decoration: none;
@@ -57,14 +58,22 @@ nav li a {
     border-bottom: 0.09375em solid transparent;
 }
 
- li:nth-child(1) a:hover, li:nth-child(2) a:hover, li:nth-child(3) a:hover, .btn:hover {
+li:nth-child(1) a:hover, 
+li:nth-child(2) a:hover, 
+li:nth-child(3) a:hover, 
+.btn:hover {
     background-color: #f6f6f6;
 }
 
- li:nth-child(1) a:focus, li:nth-child(2) a:focus {
+li:nth-child(1) a:focus, 
+li:nth-child(2) a:focus {
     background-color: #ffffff;
     border-bottom-color: #a8282f;
     color: #a8282f;
+}
+
+li:nth-child(3) a:focus {
+    background-color: #f6f6f6;
 }
 
 li input {
@@ -112,6 +121,7 @@ li:nth-child(6) {
      background-color: #f6f6f6;
 }
 
+/*when the button is click the dropdown menu will be shown*/
 .btn:focus+#options {
     display: block;
 }
@@ -141,7 +151,8 @@ li:nth-child(6) {
      transform: translate(-39%,2%);
 }
 
-#options::before,#options::after {
+#options::before,
+#options::after {
     content: " ";
     bottom: 100%;
     left: 50%;
@@ -192,3 +203,55 @@ li:nth-child(6) {
     border-bottom-left-radius: .2em;
 }
 
+#options a:nth-child(1),
+#options a:nth-child(2),
+#options a:nth-child(3),
+#options a:nth-child(4),
+#options a:nth-child(5),
+#options a:nth-child(6),
+#options a:nth-child(7) {
+	border-bottom-color: transparent;
+}
+
+#notifications {
+    display: none;
+    z-index: 1;
+    height: 17.5em;
+    width: 32.5em;
+    background-color: #fafafa;
+    border: .0625em solid #d6d6d6;
+    border-radius: .2em;
+    transform: translate(-41%,-1%);
+    position: absolute;
+}
+
+#notifications::before,
+#notifications::after {
+    content: " ";
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#notifications::after {
+    border-color: rgba(214, 214, 214, 0); /*rgba is used so that the opacity is 0*/
+    border-bottom-color: #fafafa;
+	border-width: .75em;
+	margin-left: -.75em;
+	transform: translateY(2%);
+}
+
+/*two triangles used to create the pointer with a border*/
+#notifications::before {
+    border-color: rgba(245, 245, 245, 0);
+	border-bottom-color: #d6d6d6;
+	border-width: .8em;
+	margin-left: -.8em;
+}
+
+a:focus+#notifications {
+    display: block;
+}
