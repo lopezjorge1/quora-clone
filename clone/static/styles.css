@@ -1,0 +1,257 @@
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    background-color: #fafafa;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 450;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 21%;
+}
+
+header {
+    background-color: #ffffff;
+    height: 3.25em;
+    border-bottom: .0625em solid #dddddd;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    min-width: 100%;
+    float: left;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap; /*elements were wrapping when the page resized*/
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 0.015625em;
+    padding-top: 0.9375em;
+    width: 6.25em;
+    vertical-align: top;
+}
+
+nav li a, li:nth-child(3) a {
+    display: block;
+    font-size: .875em;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    transform: translateY(-30%);
+    color: #555555;
+    border-bottom: 0.09375em solid transparent;
+}
+
+li:nth-child(1) a:hover, 
+li:nth-child(2) a:hover, 
+li:nth-child(3) a:hover, 
+.btn:hover {
+    background-color: #f6f6f6;
+}
+
+li:nth-child(1) a:focus, 
+li:nth-child(2) a:focus {
+    background-color: #ffffff;
+    border-bottom-color: #a8282f;
+    color: #a8282f;
+}
+
+li:nth-child(3) a:focus {
+    background-color: #f6f6f6;
+}
+
+li input {
+    background-image: url('search.png');
+    background-position: 0.3125em center;
+    background-repeat: no-repeat;
+    background-size: 1.25em;
+    width: 21.875em;
+    height: 0.125em;
+    font-size: 0.93em;
+    font-weight: 250;
+    padding: .75em 1.25em .75em 1.875em;
+    border: 0.0625em solid #dddddd;
+    border-radius: 0.3125em;
+    margin-bottom: .75em;
+    margin-left: 0.4375em;
+    outline: none;
+}
+
+li:nth-child(4) {
+    transform: translate(-1.5%,-2%);
+}
+
+li:nth-child(5) {
+    margin-left: 17.75em;
+}
+
+li:nth-child(6) {
+    transform: translate(-50%);
+}
+
+.btn {
+    background-image: url('quora.png');
+    background-repeat: no-repeat;
+    background-size: 1.9em;
+    background-position: center;
+    color: #555555;
+    padding-top: 2.6875em;
+    padding-bottom: 1em;
+    width: 3em;
+
+}
+
+.btn:focus {
+     background-color: #f6f6f6;
+}
+
+/*when the button is click the dropdown menu will be shown*/
+.btn:focus+#options {
+    display: block;
+}
+
+#question {
+    background-color: #a8382f;
+    text-align: center;
+    color: #ffffff;
+    height: .35em;
+    width: 7.5em;
+    border-radius: .25em;
+    padding-top: 0.3125em;
+    transform: translate(-4%,-10%);
+}
+
+.dropdown {
+    margin: 0;
+    position: relative;
+}
+
+#options {
+     display: none;
+     z-index: 1;
+     width: 12em;
+     height: 21em;
+     position: relative;
+     transform: translate(-39%,2%);
+}
+
+#options::before,
+#options::after {
+    content: " ";
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#options::after {
+    border-color: rgba(214, 214, 214, 0); /*rgba is used so that the opacity is 0*/
+    border-bottom-color: whitesmoke;
+	border-width: 1.875em;
+	margin-left: -1.875em;
+	transform: translateY(17%);
+}
+
+/*two triangles used to create the pointer with a border*/
+#options::before {
+    border-color: rgba(245, 245, 245, 0);
+	border-bottom-color: #d6d6d6;
+	border-width: 2.25em;
+	margin-left: -2.25em;
+	transform: translateY(20%);
+}
+
+#options a {
+    float: none;
+    color: #89a5c8;
+    background-color: whitesmoke;
+    font-weight: 50;
+    max-width: 12em;
+    height: 0em;
+    padding-left: 1.1em;
+    text-decoration: none;
+    text-align: left;
+    line-height: 50%; /*so that the elements were in the middle of the div*/
+    border: .1em solid #d6d6d6;
+}
+
+#options a:nth-child(1) {
+    border-top-right-radius: .2em;
+    border-top-left-radius: .2em;
+}
+
+#options a:nth-child(8) {
+    border-bottom-right-radius: .2em;
+    border-bottom-left-radius: .2em;
+}
+
+#options a:nth-child(1),
+#options a:nth-child(2),
+#options a:nth-child(3),
+#options a:nth-child(4),
+#options a:nth-child(5),
+#options a:nth-child(6),
+#options a:nth-child(7) {
+	border-bottom-color: transparent;
+}
+
+#notifications {
+    display: none;
+    z-index: 1;
+    height: 17.5em;
+    width: 32.5em;
+    background-color: #fafafa;
+    border: .0625em solid #d6d6d6;
+    border-radius: .2em;
+    transform: translate(-41%,-1%);
+    position: absolute;
+}
+
+#notifications::before,
+#notifications::after {
+    content: " ";
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#notifications::after {
+    border-color: rgba(214, 214, 214, 0); /*rgba is used so that the opacity is 0*/
+    border-bottom-color: #fafafa;
+	border-width: .75em;
+	margin-left: -.75em;
+	transform: translateY(2%);
+}
+
+/*two triangles used to create the pointer with a border*/
+#notifications::before {
+    border-color: rgba(245, 245, 245, 0);
+	border-bottom-color: #d6d6d6;
+	border-width: .8em;
+	margin-left: -.8em;
+}
+
+a:focus+#notifications {
+    display: block;
+}
