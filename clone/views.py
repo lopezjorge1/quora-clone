@@ -11,7 +11,11 @@ def index():
 
 @app.route('/',methods=['GET','POST'])
 def home():
-    return render_template('base.html')
+    return render_template('home.html')
+
+@app.route('/answer',methods=['GET','POST'])
+def answer():
+    return render_template('answer.html')
 
 #answer page
 #login page - will require oauth/auth
