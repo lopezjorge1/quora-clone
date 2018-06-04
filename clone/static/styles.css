@@ -255,3 +255,25 @@ li:nth-child(6) {
 a:focus+#notifications {
     display: block;
 }
+
+main {
+    width: 37.5625em;
+    transform: translate(50%);
+    padding-left: 3.9em;
+}
+
+main div {
+    height: 19.6875em;
+    width: 100%;
+    background-color: #ffffff;
+    border: .05em solid #efefef;
+    border-radius: .2em;
+    margin-top: 0.625em;
+}
+
+main div:nth-child(1) {
+    height: 5em;
+    margin-top: 2.1875em;
+}
+
+
