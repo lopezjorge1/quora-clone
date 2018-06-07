@@ -262,18 +262,88 @@ main {
     padding-left: 3.9em;
 }
 
-main div {
+#ask-question,
+#one,
+#two,
+#three,
+#four,
+#five,
+#six {
     height: 19.6875em;
     width: 100%;
     background-color: #ffffff;
-    border: .05em solid #efefef;
+    border: .07em solid #efefef; /*this was changed from .05em to .07em because some of the border-tops disappeared*/
     border-radius: .2em;
     margin-top: 0.625em;
 }
 
-main div:nth-child(1) {
+#ask-question {
     height: 5em;
     margin-top: 2.1875em;
 }
 
+#two {
+	height: 22.25em;
+}
 
+#three {
+    height: 12.5em;
+}
+
+#six {
+    height: 34.375em;
+}
+
+#one div:nth-child(1),
+#four div:nth-child(1),
+#five div:nth-child(1) {
+	height: 3.75em;
+	border-bottom: .05em solid #efefef;
+
+}
+
+#one div:nth-child(2),
+#four div:nth-child(2),
+#five div:nth-child(2) {
+	height: 12.8125em;
+}
+
+#one div:nth-child(3),
+#four div:nth-child(3),
+#five div:nth-child(3) {
+	height: 3.125em;
+	border-top: .05em solid #efefef;
+}
+
+#two div:nth-child(1) {
+	height: 2.8125em;
+	border-bottom: .05em solid #efefef;
+}
+
+#two div:nth-child(2) {
+	height: 8.3125em;	
+}
+
+#two div:nth-child(3) {
+	height: 11.125em;
+	border-top: .05em solid #efefef;	
+}
+
+#six div:nth-child(1) {
+    height: 3.75em;
+    border-bottom: .05em solid #efefef;
+}
+
+#six div:nth-child(2) {
+    height: 12.8125em;
+    border-bottom: .05em solid #efefef;
+}
+
+#six div:nth-child(3) {
+    height: 14.5em;
+}
+
+#six div:nth-child(4) {
+    height: 3.3125em;
+    border-top: .05em solid #efefef;
+}
